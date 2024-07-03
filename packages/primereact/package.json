@@ -1,0 +1,12 @@
+{
+    "name": "primereact",
+    "version": "0.0.1",
+    "main": "src/index.ts",
+    "private": false,
+    "scripts": {},
+    "devDependencies": {
+        "@types/node": "^20.14.9",
+        "@types/react": "^18.3.3",
+        "typescript": "^5.4.5"
+    }
+}
