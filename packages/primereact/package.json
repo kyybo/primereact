@@ -1,12 +1,16 @@
 {
     "name": "primereact",
     "version": "0.0.1",
-    "main": "src/index.ts",
+    "main": "src/index.js",
     "private": false,
     "scripts": {},
     "devDependencies": {
         "@types/node": "^20.14.9",
         "@types/react": "^18.3.3",
         "typescript": "^5.4.5"
+    },
+    "exports": {
+        ".": "./src/index.js",
+        "./inputtext": "./src/inputtext/index.js"
     }
 }

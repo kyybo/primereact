@@ -43,8 +43,8 @@ importers:
         specifier: 14.2.4
         version: 14.2.4(eslint@8.57.0)(typescript@5.5.3)
       primereact:
-        specifier: workspace:*
-        version: link:../..
+        specifier: workspace:^
+        version: link:../../packages/primereact
 
   packages/primereact:
     devDependencies:
