@@ -1,0 +1,20 @@
+import { DocSection, DocTitle, DocCodeBlock } from "@/components/docs";
+
+const importCode = 
+`import { InputText } from 'primereact/inputtext';`;
+
+const ImportDoc = ({ id }) => {
+    return (
+        <DocSection> 
+            <DocTitle id={id}>
+                Import
+            </DocTitle>
+            <DocCodeBlock>
+                {importCode}
+            </DocCodeBlock>
+        </DocSection>
+    );
+
+};
+
+export default ImportDoc;
