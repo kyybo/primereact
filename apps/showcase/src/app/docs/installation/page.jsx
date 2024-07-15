@@ -1,18 +1,14 @@
-import React from 'react';
+import docSectionsRenderer from '@/components/docs/docSectionsRenderer';
 import doc from './doc';
 
-const InputTextDocs = () => {
-    const renderDocSections = () => doc.sections.map(section =>
-        React.createElement(section.content, { id: section.id, key: section.id })
-    );
-
+const InstallationDocs = () => {
     return (
         <div>
             <h1>{doc.title}</h1>
             <p>{doc.description}</p>
-            {renderDocSections()}
+            {docSectionsRenderer(doc.sections)}
         </div>
     );
 };
 
-export default InputTextDocs;
+export default InstallationDocs;

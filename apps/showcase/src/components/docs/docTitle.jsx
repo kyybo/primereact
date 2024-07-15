@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import { createElement } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -17,7 +17,7 @@ const DocTitle = ({id, level = 2, children}) => {
     );
 
     const Title = (titleProps) => {
-        return React.createElement(`h${level}`, { className: 'doc-section-label' }, titleProps.children);
+        return createElement(`h${level}`, { className: 'doc-section-label' }, titleProps.children);
     };
 
     return <Title>{content}</Title>
