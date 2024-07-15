@@ -19,12 +19,8 @@ const BasicDoc = ({ id }) => {
             <DocExample>
                 <BasicExample />
             </DocExample>
-            <DocCodeBlock>
-                {basicCode}
-            </DocCodeBlock> 
-            <DocCodeBlock>
-                {sourceCode}
-            </DocCodeBlock>
+            <DocCodeBlock code={basicCode} mode="basic" />
+            <DocCodeBlock code={sourceCode} mode="advanced" />
 
         </DocSection>
     );

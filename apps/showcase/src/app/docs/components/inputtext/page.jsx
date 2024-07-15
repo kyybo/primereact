@@ -12,7 +12,6 @@ const InputTextDocs = () => {
             id: 'basic',
             content: BasicDoc
         }
-       
     ];
 
     const renderSections = () => sections.map(section =>
@@ -27,9 +26,5 @@ const InputTextDocs = () => {
         </div>
     );
 };
-
-InputTextDocs.getLayout = (page) => {
-    return 'xd'
-}
 
 export default InputTextDocs;

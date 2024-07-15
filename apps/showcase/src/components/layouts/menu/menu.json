@@ -1,0 +1,288 @@
+{
+    "data": [
+        {
+            "name": "Getting Started",
+            "icon": "pi pi-home",
+            "children": [
+                {
+                    "name": "Installation",
+                    "to": "/docs/installation"
+                }
+            ]
+        },
+        {
+            "name": "Components",
+            "icon": "pi pi-compass",
+            "children": [
+                {
+                    "name": "Form",
+                    "children": [
+                        {
+                            "name": "Input Text",
+                            "to": "/docs/components/inputtext"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Theming",
+            "icon": "pi pi-palette",
+            "children": [
+                {
+                    "name": "Overview",
+                    "to": "/docs/theming/overview"
+                },
+                {
+                    "name": "Colors",
+                    "to": "/docs/theming/colors"
+                },
+                {
+                    "name": "SASS API",
+                    "href": "https://www.primefaces.org/designer/api/primereact/9.0.0"
+                },
+                {
+                    "name": "Unstyled Mode",
+                    "children": [
+                        {
+                            "name": "Overview",
+                            "to": "/docs/theming/unstyled"
+                        },
+                        {
+                            "name": "Bootstrap",
+                            "to": "/docs/theming/bootstrap"
+                        },
+                        {
+                            "name": "Bulma",
+                            "to": "/docs/theming/bulma"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Pass Through",
+            "icon": "pi pi-directions",
+            "to": "/docs/passthrough"
+        },
+        {
+            "name": "Tailwind",
+            "icon": "pi pi-heart",
+            "to": "/docs/tailwind"
+        },
+        {
+            "name": "Figma UI Kit",
+            "icon": "pi pi-pencil",
+            "to": "/docs/uikit"
+        },
+        {
+            "name": "Icons",
+            "icon": "pi pi-eye",
+            "children": [
+                {
+                    "name": "Prime Icons",
+                    "to": "/docs/icons/primeicons",
+                    "badge": "UPDATED"
+                },
+                {
+                    "name": "Custom Icons",
+                    "to": "/docs/icons/customicons"
+                }
+            ]
+        },
+        {
+            "name": "Hooks",
+            "icon": "pi pi-link",
+            "children": [
+                {
+                    "name": "Lifecycle",
+                    "children": [
+                        {
+                            "name": "useMountEffect",
+                            "to": "/docs/hooks/usemounteffect"
+                        },
+                        {
+                            "name": "useUpdateEffect",
+                            "to": "/docs/hooks/useupdateeffect"
+                        },
+                        {
+                            "name": "useUnmountEffect",
+                            "to": "/docs/hooks/useunmounteffect"
+                        }
+                    ]
+                },
+                {
+                    "name": "Listener",
+                    "children": [
+                        {
+                            "name": "useEventListener",
+                            "to": "/docs/hooks/useeventlistener"
+                        },
+                        {
+                            "name": "useOverlayListener",
+                            "to": "/docs/hooks/useoverlaylistener"
+                        },
+                        {
+                            "name": "useOverlayScrollListener",
+                            "to": "/docs/hooks/useoverlayscrolllistener"
+                        },
+                        {
+                            "name": "useResizeListener",
+                            "to": "/docs/hooks/useresizelistener"
+                        }
+                    ]
+                },
+                {
+                    "name": "Element",
+                    "children": [
+                        {
+                            "name": "useClickOutside",
+                            "to": "/docs/hooks/useclickoutside"
+                        },
+                        {
+                            "name": "useIntersectionObserver",
+                            "to": "/docs/hooks/useintersectionobserver"
+                        },
+                        {
+                            "name": "useMouse",
+                            "to": "/docs/hooks/usemouse"
+                        },
+                        {
+                            "name": "useMove",
+                            "to": "/docs/hooks/usemove"
+                        }
+                    ]
+                },
+                {
+                    "name": "Timer",
+                    "children": [
+                        {
+                            "name": "useInterval",
+                            "to": "/docs/hooks/useinterval"
+                        },
+                        {
+                            "name": "useTimeout",
+                            "to": "/docs/hooks/usetimeout"
+                        }
+                    ]
+                },
+                {
+                    "name": "State",
+                    "children": [
+                        {
+                            "name": "useCounter",
+                            "to": "/docs/hooks/usecounter"
+                        },
+                        {
+                            "name": "useDebounce",
+                            "to": "/docs/hooks/usedebounce"
+                        },
+                        {
+                            "name": "useFavicon",
+                            "to": "/docs/hooks/usefavicon"
+                        },
+                        {
+                            "name": "usePrevious",
+                            "to": "/docs/hooks/useprevious"
+                        },
+                        {
+                            "name": "useStorage",
+                            "to": "/docs/hooks/usestorage"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Templates",
+            "icon": "pi pi-star",
+            "to": "/docs/templates"
+        },
+        {
+            "name": "PrimeBlocks",
+            "icon": "pi pi-server",
+            "href": "https://blocks.primereact.org"
+        },
+        {
+            "name": "PrimeFlex CSS",
+            "icon": "pi pi-table",
+            "href": "https://primeflex.org",
+            "target": "_blank"
+        },
+        {
+            "name": "Guides",
+            "icon": "pi pi-book",
+            "children": [
+                {
+                    "name": "Accessibility",
+                    "to": "/docs/guides/accessibility"
+                },
+                {
+                    "name": "CSS Layer",
+                    "to": "/docs/guides/csslayer"
+                },
+                {
+                    "name": "PrimeTV",
+                    "icon": "pi pi-youtube",
+                    "href": "https://www.youtube.com/channel/UCTgmp69aBOlLnPEqlUyetWw"
+                }
+            ]
+        },
+        {
+            "name": "Support",
+            "icon": "pi pi-question",
+            "children": [
+                {
+                    "name": "Discord",
+                    "href": "https://discord.gg/gzKFYnpmCY"
+                },
+                {
+                    "name": "Forum",
+                    "href": "https://github.com/orgs/primefaces/discussions"
+                },
+                {
+                    "name": "PRO Support",
+                    "to": "/docs/support"
+                }
+            ]
+        },
+        {
+            "name": "Discover",
+            "icon": "pi pi-search",
+            "children": [
+                {
+                    "name": "About Us",
+                    "to": "/docs/team"
+                },
+                {
+                    "name": "Roadmap",
+                    "to": "/docs/roadmap"
+                },
+                {
+                    "name": "Source Code",
+                    "href": "https://github.com/primefaces/primereact"
+                },
+                {
+                    "name": "Changelog",
+                    "href": "https://github.com/primefaces/primereact/blob/master/CHANGELOG.md"
+                },
+                {
+                    "name": "Store",
+                    "href": "https://www.primefaces.org/store/"
+                },
+                {
+                    "name": "Twitter",
+                    "href": "https://twitter.com/primereact?lang=en"
+                },
+                {
+                    "name": "Newsletter",
+                    "href": "https://www.primefaces.org/newsletter"
+                },
+                {
+                    "name": "PrimeGear",
+                    "href": "https://gear.primefaces.org"
+                }
+            ]
+        }
+    ]
+}

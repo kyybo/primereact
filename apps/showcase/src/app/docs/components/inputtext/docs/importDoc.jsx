@@ -9,8 +9,7 @@ const ImportDoc = ({ id }) => {
             <DocTitle id={id}>
                 Import
             </DocTitle>
-            <DocCodeBlock>
-                {importCode}
+            <DocCodeBlock code={importCode} mode="basic">
             </DocCodeBlock>
         </DocSection>
     );

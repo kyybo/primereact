@@ -1,3 +1,8 @@
+import '@/styles/tailwind/main.css';
+import '@/styles/layout/layout.scss';
+import 'primeicons/primeicons.css';
+
+import Topbar from "@/components/layouts/topbar";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -10,7 +15,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link href="https://primefaces.org/cdn/primereact/images/favicon.ico" rel="icon" type="image/x-icon"></link>
+      </head>
+      <body className={inter.className}>
+        <div className='layout-wrapper layout-light'>
+          <Topbar />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

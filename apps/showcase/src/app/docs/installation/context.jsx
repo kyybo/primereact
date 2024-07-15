@@ -1,5 +1,7 @@
 import { DocSection, DocTitle, DocCodeBlock, DocDescription } from "@/components/docs";
 
+const contextCode = `import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';`
+
 const ContextSection = ({ id }) => {
     return (
         <DocSection> 
@@ -9,9 +11,7 @@ const ContextSection = ({ id }) => {
             <DocDescription>
                 Configuration is managed by the PrimeReactProvider and PrimeReactContext imported from primereact/api.
             </DocDescription>
-            <DocCodeBlock>
-                {`import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';`}
-            </DocCodeBlock>
+            <DocCodeBlock code={contextCode} />
         </DocSection>
     );
 
