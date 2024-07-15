@@ -1,28 +1,16 @@
 import React from 'react';
-import ImportDoc from "./docs/importDoc";
-import BasicDoc from './docs/basicDoc';
+import doc from './doc';
 
 const InputTextDocs = () => {
-    const sections = [
-        {
-            id: 'import',
-            content: ImportDoc
-        },
-        {
-            id: 'basic',
-            content: BasicDoc
-        }
-    ];
-
-    const renderSections = () => sections.map(section =>
+    const renderDocSections = () => doc.sections.map(section =>
         React.createElement(section.content, { id: section.id, key: section.id })
     );
 
     return (
         <div>
-            <h1>InputText</h1>
-            <p>InputText is an extension to standard input element with theming and keyfiltering.</p>
-            {renderSections()}
+            <h1>{doc.title}</h1>
+            <p>{doc.description}</p>
+            {renderDocSections()}
         </div>
     );
 };

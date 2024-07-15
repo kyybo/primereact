@@ -1,29 +1,18 @@
 import React from 'react';
-import DownloadSection from "./download";
-import ContextSection from './context';
+import doc from './doc';
 
-const InstallationDocs = () => {
-    const sections = [
-        {
-            id: 'download',
-            content: DownloadSection
-        },
-        {
-            id: 'context',
-            content: ContextSection
-        }
-    ];
-
-    const renderSections = () => sections.map(section =>
+const InputTextDocs = () => {
+    const renderDocSections = () => doc.sections.map(section =>
         React.createElement(section.content, { id: section.id, key: section.id })
     );
 
     return (
         <div>
-            <h1>Installation</h1>
-            {renderSections()}
+            <h1>{doc.title}</h1>
+            <p>{doc.description}</p>
+            {renderDocSections()}
         </div>
     );
 };
 
-export default InstallationDocs;
+export default InputTextDocs;
