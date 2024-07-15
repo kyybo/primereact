@@ -7,7 +7,7 @@ const sourceCode = readFile('/src/app/docs/components/inputtext/examples/basicEx
 const basicCode = 
 `<InputText value={value} onChange={(e) => setValue(e.target.value)} />`;
 
-const BasicDoc = ({ id }) => {
+const BasicSection = ({ id }) => {
     return (
         <DocSection> 
             <DocTitle id={id}>
@@ -27,4 +27,4 @@ const BasicDoc = ({ id }) => {
 };
 
 
-export default BasicDoc;
+export default BasicSection;

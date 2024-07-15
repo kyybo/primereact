@@ -1,16 +1,16 @@
-import ImportDoc from "./docs/importDoc";
-import BasicDoc from './docs/basicDoc';
+import ImportSection from "./sections/import";
+import BasicSection from './sections/basic';
 
 const sections = [
     {
         id: 'import',
         label: 'Import',
-        content: ImportDoc
+        content: ImportSection
     },
     {
         id: 'basic',
         label: 'Basic',
-        content: BasicDoc
+        content: BasicSection
     }
 ];
 

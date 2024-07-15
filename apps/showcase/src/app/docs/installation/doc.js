@@ -1,5 +1,5 @@
-import ContextSection from "./context";
-import DownloadSection from "./download";
+import ContextSection from "./sections/context";
+import DownloadSection from "./sections/download";
 
 const sections = [
     {

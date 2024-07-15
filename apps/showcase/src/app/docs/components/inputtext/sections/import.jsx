@@ -3,7 +3,7 @@ import { DocSection, DocTitle, DocCodeBlock } from "@/components/docs";
 const importCode = 
 `import { InputText } from 'primereact/inputtext';`;
 
-const ImportDoc = ({ id }) => {
+const ImportSection = ({ id }) => {
     return (
         <DocSection> 
             <DocTitle id={id}>
@@ -16,4 +16,4 @@ const ImportDoc = ({ id }) => {
 
 };
 
-export default ImportDoc;
+export default ImportSection;
