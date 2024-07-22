@@ -1,7 +1,7 @@
-import ImportSection from "./sections/import";
-import BasicSection from './sections/basic';
+import ImportSection from "./features/sections/import";
+import BasicSection from './features/sections/basic';
 
-const sections = [
+const featuresSections = [
     {
         id: 'import',
         label: 'Import',
@@ -14,11 +14,34 @@ const sections = [
     }
 ];
 
+const tabs = [
+    {
+        id: 'features',
+        label: 'Features',
+        sections: featuresSections
+    },
+    {
+        id: 'api',
+        label: 'API',
+        sections: []
+    },
+    {
+        id: 'theming',
+        label: 'Theming',
+        sections: []
+    },
+    {
+        id: 'pass-through',
+        label: 'Pass Through',
+        sections: []
+    }
+];
+
 const doc = {
     id: 'inputtext',
     title: 'InputText',
     description: 'InputText is an extension to standard input element with theming and keyfiltering.',
-    sections: sections
+    tabs: tabs
 };
 
 export default doc;
