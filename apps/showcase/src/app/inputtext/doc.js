@@ -30,10 +30,16 @@ const themingContent = {
     sections: []
 };
 
+const passThroughContent = {
+    title: 'InputText Pass Through',
+    description: '',
+    sections: []
+};
+
 const tabs = [
     {
         id: 'features',
-        label: 'Features',
+        label: 'FEATURES',
         content: featuresContent
     },
     {
@@ -43,13 +49,13 @@ const tabs = [
     },
     {
         id: 'theming',
-        label: 'Theming',
+        label: 'THEMING',
         content: themingContent
     },
     {
         id: 'pass-through',
-        label: 'Pass Through',
-        content: []
+        label: 'PASS THROUGH',
+        content: passThroughContent
     }
 ];
 

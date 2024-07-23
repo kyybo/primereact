@@ -8,17 +8,23 @@ const DocCodeBlock = ({ code, lang, mode }) => {
     const [langState, setLangState] = useState(lang || 'js');
 
     const toggleMode = () => {
-        setModeState(mode === 'basic' ? 'advanced' : 'basic');
+        setModeState(modeState === 'basic' ? 'advanced' : 'basic');
     };
 
     const copyToClipboard = async () => {
-        await navigator.clipboard.writeText(code[lang]);
+        await navigator.clipboard.writeText('magical code');
     }
 
     return (
-        <CodeHighlight lang={langState}>
-            {code?.[modeState] || code}
-        </CodeHighlight>
+        <div>  
+            <div className="flex justify-end">
+                <button onClick={() => toggleMode()}>toggle</button>
+                <button onClick={copyToClipboard}>copy</button>
+            </div>
+            <CodeHighlight lang={langState}>
+                {code?.[modeState] || code}
+            </CodeHighlight>
+        </div>
     )
 };
 

@@ -21,6 +21,11 @@ const BasicSection = ({ id }) => {
     useEffect(() => {
         setSourceCode(fetchSourceCode());
     }, []);
+
+    const exampleCodes = {
+        basic: basicCode,
+        advanced: sourceCode
+    }
     
     return (
         <DocSection> 
@@ -33,8 +38,7 @@ const BasicSection = ({ id }) => {
             <DocExample>
                 <BasicExample />
             </DocExample>
-            <DocCodeBlock code={basicCode} mode="basic" />
-            <DocCodeBlock code={sourceCode} mode="advanced" />
+            <DocCodeBlock code={exampleCodes} />
         </DocSection>
     );
 };
