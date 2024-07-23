@@ -11,6 +11,6 @@
     },
     "exports": {
         ".": "./src/index.js",
-        "./inputtext": "./src/inputtext/index.js"
+        "./inputtext": "./src/inputtext/index.ts"
     }
 }

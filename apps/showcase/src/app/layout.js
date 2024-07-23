@@ -4,6 +4,7 @@ import 'primeicons/primeicons.css';
 
 import Topbar from "@/components/layouts/topbar";
 import { Inter } from "next/font/google";
+import Menu from '@/components/layouts/menu';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,12 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className='layout-wrapper layout-light'>
           <Topbar />
-          {children}
+            <div className='layout-content'>
+              <Menu className='layout-sidebar'/>
+              <div className="layout-content-slot">
+                {children}
+              </div>
+          </div>
         </div>
       </body>
     </html>

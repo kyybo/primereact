@@ -1,5 +1,5 @@
-import ContextSection from "./sections/context";
-import DownloadSection from "./sections/download";
+import ContextSection from "@/doc/installation/context";
+import DownloadSection from "@/doc/installation/download";
 
 const sections = [
     {
@@ -15,7 +15,6 @@ const sections = [
 ];
 
 const doc = {
-    id: 'installation',
     title: 'Installation',
     description: 'PrimeReact is a rich set of open source UI components for React.',
     sections: sections

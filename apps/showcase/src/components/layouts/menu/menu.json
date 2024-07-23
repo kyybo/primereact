@@ -6,7 +6,7 @@
             "children": [
                 {
                     "name": "Installation",
-                    "to": "/docs/installation"
+                    "to": "/installation"
                 }
             ]
         },
@@ -19,7 +19,7 @@
                     "children": [
                         {
                             "name": "Input Text",
-                            "to": "/docs/components/inputtext"
+                            "to": "/inputtext"
                         }
                     ]
                 }
@@ -31,11 +31,11 @@
             "children": [
                 {
                     "name": "Overview",
-                    "to": "/docs/theming/overview"
+                    "to": "/theming/overview"
                 },
                 {
                     "name": "Colors",
-                    "to": "/docs/theming/colors"
+                    "to": "/theming/colors"
                 },
                 {
                     "name": "SASS API",
@@ -46,15 +46,15 @@
                     "children": [
                         {
                             "name": "Overview",
-                            "to": "/docs/theming/unstyled"
+                            "to": "/theming/unstyled"
                         },
                         {
                             "name": "Bootstrap",
-                            "to": "/docs/theming/bootstrap"
+                            "to": "/theming/bootstrap"
                         },
                         {
                             "name": "Bulma",
-                            "to": "/docs/theming/bulma"
+                            "to": "/theming/bulma"
                         }
                     ]
                 }
@@ -63,17 +63,17 @@
         {
             "name": "Pass Through",
             "icon": "pi pi-directions",
-            "to": "/docs/passthrough"
+            "to": "/passthrough"
         },
         {
             "name": "Tailwind",
             "icon": "pi pi-heart",
-            "to": "/docs/tailwind"
+            "to": "/tailwind"
         },
         {
             "name": "Figma UI Kit",
             "icon": "pi pi-pencil",
-            "to": "/docs/uikit"
+            "to": "/uikit"
         },
         {
             "name": "Icons",
@@ -81,12 +81,12 @@
             "children": [
                 {
                     "name": "Prime Icons",
-                    "to": "/docs/icons/primeicons",
+                    "to": "/icons/primeicons",
                     "badge": "UPDATED"
                 },
                 {
                     "name": "Custom Icons",
-                    "to": "/docs/icons/customicons"
+                    "to": "/icons/customicons"
                 }
             ]
         },
@@ -99,15 +99,15 @@
                     "children": [
                         {
                             "name": "useMountEffect",
-                            "to": "/docs/hooks/usemounteffect"
+                            "to": "/hooks/usemounteffect"
                         },
                         {
                             "name": "useUpdateEffect",
-                            "to": "/docs/hooks/useupdateeffect"
+                            "to": "/hooks/useupdateeffect"
                         },
                         {
                             "name": "useUnmountEffect",
-                            "to": "/docs/hooks/useunmounteffect"
+                            "to": "/hooks/useunmounteffect"
                         }
                     ]
                 },
@@ -116,19 +116,19 @@
                     "children": [
                         {
                             "name": "useEventListener",
-                            "to": "/docs/hooks/useeventlistener"
+                            "to": "/hooks/useeventlistener"
                         },
                         {
                             "name": "useOverlayListener",
-                            "to": "/docs/hooks/useoverlaylistener"
+                            "to": "/hooks/useoverlaylistener"
                         },
                         {
                             "name": "useOverlayScrollListener",
-                            "to": "/docs/hooks/useoverlayscrolllistener"
+                            "to": "/hooks/useoverlayscrolllistener"
                         },
                         {
                             "name": "useResizeListener",
-                            "to": "/docs/hooks/useresizelistener"
+                            "to": "/hooks/useresizelistener"
                         }
                     ]
                 },
@@ -137,19 +137,19 @@
                     "children": [
                         {
                             "name": "useClickOutside",
-                            "to": "/docs/hooks/useclickoutside"
+                            "to": "/hooks/useclickoutside"
                         },
                         {
                             "name": "useIntersectionObserver",
-                            "to": "/docs/hooks/useintersectionobserver"
+                            "to": "/hooks/useintersectionobserver"
                         },
                         {
                             "name": "useMouse",
-                            "to": "/docs/hooks/usemouse"
+                            "to": "/hooks/usemouse"
                         },
                         {
                             "name": "useMove",
-                            "to": "/docs/hooks/usemove"
+                            "to": "/hooks/usemove"
                         }
                     ]
                 },
@@ -158,11 +158,11 @@
                     "children": [
                         {
                             "name": "useInterval",
-                            "to": "/docs/hooks/useinterval"
+                            "to": "/hooks/useinterval"
                         },
                         {
                             "name": "useTimeout",
-                            "to": "/docs/hooks/usetimeout"
+                            "to": "/hooks/usetimeout"
                         }
                     ]
                 },
@@ -171,23 +171,23 @@
                     "children": [
                         {
                             "name": "useCounter",
-                            "to": "/docs/hooks/usecounter"
+                            "to": "/hooks/usecounter"
                         },
                         {
                             "name": "useDebounce",
-                            "to": "/docs/hooks/usedebounce"
+                            "to": "/hooks/usedebounce"
                         },
                         {
                             "name": "useFavicon",
-                            "to": "/docs/hooks/usefavicon"
+                            "to": "/hooks/usefavicon"
                         },
                         {
                             "name": "usePrevious",
-                            "to": "/docs/hooks/useprevious"
+                            "to": "/hooks/useprevious"
                         },
                         {
                             "name": "useStorage",
-                            "to": "/docs/hooks/usestorage"
+                            "to": "/hooks/usestorage"
                         }
                     ]
                 }
@@ -196,7 +196,7 @@
         {
             "name": "Templates",
             "icon": "pi pi-star",
-            "to": "/docs/templates"
+            "to": "/templates"
         },
         {
             "name": "PrimeBlocks",
@@ -215,11 +215,11 @@
             "children": [
                 {
                     "name": "Accessibility",
-                    "to": "/docs/guides/accessibility"
+                    "to": "/guides/accessibility"
                 },
                 {
                     "name": "CSS Layer",
-                    "to": "/docs/guides/csslayer"
+                    "to": "/guides/csslayer"
                 },
                 {
                     "name": "PrimeTV",
@@ -242,7 +242,7 @@
                 },
                 {
                     "name": "PRO Support",
-                    "to": "/docs/support"
+                    "to": "/support"
                 }
             ]
         },
@@ -252,11 +252,11 @@
             "children": [
                 {
                     "name": "About Us",
-                    "to": "/docs/team"
+                    "to": "/team"
                 },
                 {
                     "name": "Roadmap",
-                    "to": "/docs/roadmap"
+                    "to": "/roadmap"
                 },
                 {
                     "name": "Source Code",

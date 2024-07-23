@@ -1,5 +1,7 @@
+'use client';
+
 import { DocSection, DocTitle, DocCodeBlock, DocDescription, DocExample } from "@/components/docs";
-import BasicExample from "../examples/basicExample";
+import BasicExample from "./examples/basicExample";
 import fileHandler from "@/api/fileHandler";
 import { useEffect, useState } from "react";
 
@@ -10,12 +12,12 @@ const BasicSection = ({ id }) => {
     const [sourceCode, setSourceCode] = useState('');
 
     const fetchSourceCode = async () => {
-        const filePath = '/src/app/docs/components/inputtext/features/examples/basicExample.jsx'; // Specify your file path here
+        const filePath = '/src/doc/components/inputtext/features/examples/basicExample.jsx'; // Specify your file path here
         const code = await fileHandler(filePath);
 
         return code;
     };
-    
+
     useEffect(() => {
         setSourceCode(fetchSourceCode());
     }, []);
@@ -33,7 +35,6 @@ const BasicSection = ({ id }) => {
             </DocExample>
             <DocCodeBlock code={basicCode} mode="basic" />
             <DocCodeBlock code={sourceCode} mode="advanced" />
-
         </DocSection>
     );
 };
