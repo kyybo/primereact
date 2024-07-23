@@ -12,7 +12,7 @@ const BasicSection = ({ id }) => {
     const [sourceCode, setSourceCode] = useState('');
 
     const fetchSourceCode = async () => {
-        const filePath = '/src/doc/components/inputtext/features/examples/basicExample.jsx'; // Specify your file path here
+        const filePath = '/src/docs/components/inputtext/features/examples/basicExample.jsx'; // Specify your file path here
         const code = await fileHandler(filePath);
 
         return code;

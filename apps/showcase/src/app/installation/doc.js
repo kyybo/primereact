@@ -1,5 +1,5 @@
-import ContextSection from "@/doc/installation/context";
-import DownloadSection from "@/doc/installation/download";
+import ContextSection from "@/docs/installation/context";
+import DownloadSection from "@/docs/installation/download";
 
 const sections = [
     {

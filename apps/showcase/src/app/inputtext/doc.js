@@ -1,5 +1,5 @@
-import ImportSection from "@/doc/components/inputtext/features/import";
-import BasicSection from '@/doc/components/inputtext/features/basic';
+import ImportSection from "@/docs/components/inputtext/features/import";
+import BasicSection from '@/docs/components/inputtext/features/basic';
 
 const featuresContent = {
     title: 'InputText',
