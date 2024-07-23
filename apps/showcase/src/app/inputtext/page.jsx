@@ -1,6 +1,6 @@
 'use client';
 
-import DocPage from '@/components/layouts/docPage';
+import DocPage from '@/components/layout/docPage';
 import doc from './doc';
 
 const InputTextDocs = () => {

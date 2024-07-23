@@ -1,4 +1,4 @@
-import docSectionsRenderer from "@/components/docs/docSectionsRenderer";
+import docSectionsRenderer from "@/components/doc/docSectionsRenderer";
 import SectionNav from "../sectionNav";
 
 const PlainDoc = ({ doc }) => {

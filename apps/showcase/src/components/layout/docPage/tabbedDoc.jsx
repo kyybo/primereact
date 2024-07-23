@@ -1,6 +1,6 @@
 'use client';
 
-import docSectionsRenderer from "@/components/docs/docSectionsRenderer";
+import docSectionsRenderer from "@/components/doc/docSectionsRenderer";
 import { useState } from "react";
 import SectionNav from "../sectionNav";
 

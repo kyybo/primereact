@@ -2,9 +2,9 @@ import '@/styles/tailwind/main.css';
 import '@/styles/layout/layout.scss';
 import 'primeicons/primeicons.css';
 
-import Topbar from "@/components/layouts/topbar";
+import Topbar from "@/components/layout/topbar";
 import { Inter } from "next/font/google";
-import Menu from '@/components/layouts/menu';
+import Menu from '@/components/layout/menu';
 
 const inter = Inter({ subsets: ["latin"] });
 

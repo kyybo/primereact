@@ -1,4 +1,4 @@
-import { DocSection, DocTitle, DocCodeBlock, DocDescription } from "@/components/docs";
+import { DocSection, DocTitle, DocCodeBlock, DocDescription } from "@/components/doc";
 
 const downloadCode = `// with npm
 npm install primereact

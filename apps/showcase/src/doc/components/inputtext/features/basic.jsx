@@ -1,6 +1,6 @@
 'use client';
 
-import { DocSection, DocTitle, DocCodeBlock, DocDescription, DocExample } from "@/components/docs";
+import { DocSection, DocTitle, DocCodeBlock, DocDescription, DocExample } from "@/components/doc";
 import BasicExample from "./examples/basicExample";
 import fileHandler from "@/api/fileHandler";
 import { useEffect, useState } from "react";

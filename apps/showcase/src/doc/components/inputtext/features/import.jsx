@@ -1,4 +1,4 @@
-import { DocSection, DocTitle, DocCodeBlock } from "@/components/docs";
+import { DocSection, DocTitle, DocCodeBlock } from "@/components/doc";
 
 const importCode = 
 `import { InputText } from 'primereact/inputtext';`;
