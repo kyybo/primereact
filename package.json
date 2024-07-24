@@ -1,21 +1,51 @@
 {
-  "name": "@primereact/monorepo",
-  "version": "12.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "showcase": "pnpm --filter showcase",
-    "primereact": "pnpm --filter primereact"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@types/node": "^20.12.12",
-    "@types/react": "^18.3.2",
-    "@types/react-dom": "^18.3.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  }
+    "name": "@primereact/monorepo",
+    "version": "12.0.0",
+    "author": "PrimeTek Informatics",
+    "homepage": "https://primereact.org/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/primefaces/primereact.git"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/primefaces/primereact/issues"
+    },
+    "scripts": {
+        "setup": "rm -rf **/node_modules **/dist ./pnpm-lock.yaml && pnpm install",
+        "link": "pnpm --filter './packages/*' dev:link",
+        "release": "pnpm run build && pnpm recursive publish --filter './packages/*' --no-git-checks --report-summary",
+        "release:beta": "pnpm run build && pnpm recursive publish --filter './packages/*' --no-git-checks --report-summary --tag beta",
+        "release:rc": "pnpm run build && pnpm recursive publish --filter './packages/*' --no-git-checks --report-summary --tag rc",
+        "build": "NODE_ENV=production pnpm run build:check && pnpm run build:packages",
+        "build:check": "pnpm run format:check && pnpm run security:check",
+        "build:packages": "pnpm run build:metadata && pnpm run build:resolver && pnpm run build:core && pnpm run build:lib && pnpm run build:module && pnpm run build:themes && pnpm run build:icons && pnpm run build:showcase",
+        "build:resolver": "pnpm --filter auto-import-resolver build",
+        "build:core": "pnpm --filter core build",
+        "build:metadata": "pnpm --filter metadata build",
+        "build:module": "pnpm --filter nuxt-module build",
+        "build:lib": "pnpm --filter primereact build",
+        "build:themes": "pnpm --filter themes build",
+        "build:icons": "pnpm --filter icons build",
+        "build:showcase": "pnpm --filter showcase build:prebuild",
+        "build:apidoc": "pnpm --filter themes build:tokens && pnpm --filter showcase build:apidoc",
+        "dev": "pnpm --filter showcase dev",
+        "security:check": "pnpm audit --prod --audit-level high",
+        "format": "prettier --write \"**/*.{js,jsx,mjs,ts,tsx,d.ts}\" --cache",
+        "format:check": "prettier --check \"**/*.{js,jsx,mjs,ts,tsx,d.ts}\"",
+        "lint": "eslint --ext \".js,.jsx,.mjs,.ts,.tsx\" --ignore-path .gitignore . --cache",
+        "lint:fix": "eslint --fix --ext \".js,.jsx,.mjs,.ts,.tsx\" --ignore-path .gitignore ."
+    },
+    "devDependencies": {
+        "eslint": "^8.30.0",
+        "typescript": "^4.9.4",
+        "prettier": "2.7.1",
+        "pnpm": "9.1.4"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "engines": {
+        "node": ">=12.11.0"
+    }
 }

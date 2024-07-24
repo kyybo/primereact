@@ -1,14 +1,13 @@
-import React from 'react';
+import * as React from 'react';
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface InputTextProps extends React.InputHTMLAttributes<HTMLInputElement> {
     ref?: React.RefObject<HTMLInputElement>;
 }
 
-const InputText: React.FC<InputProps> = (props) => {
-    return <>
-        <input {...props}/>
-    </>
-
+export const InputText = (props: InputTextProps) => {
+    return (
+        <>
+            <input {...props} />
+        </>
+    );
 };
-
-export default InputText;

@@ -1,7 +1,7 @@
 'use client';
 
+import { InputText } from 'primereact/inputtext';
 import { useState } from 'react';
-import InputText from 'primereact/inputtext';
 
 const BasicExample = () => {
     const [value, setValue] = useState('');
