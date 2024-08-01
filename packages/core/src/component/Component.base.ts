@@ -13,21 +13,21 @@ const getDiffProps = (props1: any = {}, props2: any = {}) => {
     return Object.keys(props1).reduce(
         (acc, key) => {
             if (props2.hasOwnProperty(key)) {
-                acc.props[key] = props2[key];
+                acc.props[key] = props1[key];
             } else {
-                acc.attrs[key] = props2[key];
+                acc.attrs[key] = props1[key];
             }
 
             return acc;
         },
-        { props: props1, attrs: {} as any }
+        { props: props2, attrs: {} as any }
     );
 };
 
 export const useComponent = (options: any = {}) => {
     const config = useContext(PrimeReactContext);
     const context = useContext(ComponentContext);
-    const { props, attrs } = getDiffProps({ ...defaultProps, ...options.defaultProps }, options.props);
+    const { props, attrs } = getDiffProps(options.props, { ...defaultProps, ...options.defaultProps });
 
     const ptm = (key: string) => {};
     const cx = (key: string) => {};

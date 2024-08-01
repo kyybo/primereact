@@ -1,3 +1,4 @@
+'use client';
 import { Component, ComponentProvider } from '@primereact/core/component';
 import * as React from 'react';
 import { usePanel } from './Panel.base';
