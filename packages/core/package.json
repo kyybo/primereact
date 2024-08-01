@@ -1,38 +1,30 @@
 {
-    "name": "primereact",
+    "name": "@primereact/core",
     "version": "12.0.0",
     "author": "PrimeTek Informatics",
-    "description": "PrimeReact is an open source UI library for React featuring a rich set of 80+ components, a theme designer, various theme alternatives such as Material, Bootstrap, Tailwind, premium templates and professional support. In addition, it integrates with PrimeBlock, which has 370+ ready to use UI blocks to build spectacular applications in no time.",
+    "description": "",
     "homepage": "https://primereact.org/",
     "license": "MIT",
     "repository": {
         "type": "git",
         "url": "https://github.com/primefaces/primereact.git",
-        "directory": "packages/primereact"
+        "directory": "packages/core"
     },
     "bugs": {
         "url": "https://github.com/primefaces/primereact/issues"
     },
-    "keywords": [
-        "primereact",
-        "ui library",
-        "component library",
-        "material",
-        "bootstrap",
-        "fluent",
-        "tailwind",
-        "unstyled",
-        "passthrough"
-    ],
-    "unpkg": "umd/primereact.min.js",
-    "jsdelivr": "umd/primereact.min.js",
+    "main": "./src/index.ts",
     "exports": {
-        "./inputtext": "./src/inputtext/index.ts",
-        "./panel": "./src/panel/index.ts",
-        "./*": "./*"
+        "./component": "./src/component/index.ts"
     },
     "publishConfig": {
+        "main": "./index.mjs",
+        "types": "./index.d.ts",
         "exports": {
+            ".": {
+                "types": "./index.d.ts",
+                "import": "./index.mjs"
+            },
             "./*": {
                 "types": "./*/index.d.ts",
                 "import": "./*/index.mjs"
@@ -44,8 +36,7 @@
     },
     "scripts": {
         "build": "NODE_ENV=production INPUT_DIR=src/ OUTPUT_DIR=dist/ pnpm run build:package",
-        "build:package": "pnpm run build:prebuild && pnpm run build:api && rollup -c && pnpm run build:postbuild",
-        "build:api": "node ./scripts/build-api.js",
+        "build:package": "pnpm run build:prebuild && rollup -c && pnpm run build:postbuild",
         "build:prebuild": "node ./scripts/prebuild.mjs",
         "build:postbuild": "node ./scripts/postbuild.mjs",
         "dev:link": "pnpm link --global && npm link"
@@ -58,9 +49,8 @@
         "react": "^18.3.1",
         "react-dom": "^18.3.1"
     },
-    "devDependencies": {
-        "react": "18.3.1",
-        "@types/react": "^18.3.3"
+    "peerDependencies": {
+        "react": "^18.0.0"
     },
     "engines": {
         "node": ">=12.11.0"

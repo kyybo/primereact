@@ -1,7 +1,8 @@
+'use client';
 import * as React from 'react';
 import { combinedRefs } from '../utils/objectUtils';
 
-interface InputTextProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'value'>  {
+interface InputTextProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'value'> {
     ref?: React.RefObject<HTMLInputElement>;
     size?: number | string;
     invalid?: boolean;
@@ -40,7 +41,7 @@ export const InputText = React.forwardRef<HTMLInputElement, InputTextProps>((pro
         onKeyDown: handleOnKeyDown,
         onBeforeInput: handleOnBeforeInput,
         onInput: handleOnInput,
-        onPaste: handleOnPaste  
+        onPaste: handleOnPaste
     };
 
     return (
