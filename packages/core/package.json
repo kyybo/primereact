@@ -45,7 +45,8 @@
     },
     "dependencies": {
         "@primeuix/styled": "^0.0.5",
-        "@primeuix/utils": "^0.0.5"
+        "@primeuix/utils": "^0.0.5",
+        "@primereact/hooks": "workspace:*"
     },
     "devDependencies": {
         "@types/react": "^18.3.3",

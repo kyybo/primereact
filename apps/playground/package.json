@@ -14,7 +14,8 @@
         "next": "14.2.5",
         "primereact": "workspace:*",
         "@primereact/base": "workspace:*",
-        "@primereact/composite": "workspace:*"
+        "@primereact/composite": "workspace:*",
+        "@primereact/core": "workspace:*"
     },
     "devDependencies": {
         "typescript": "^5",

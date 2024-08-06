@@ -1,39 +1,16 @@
-'use client';
 import { Theme } from '@primeuix/styled';
 import { classNames, uuid } from '@primeuix/utils';
 import { mergeProps } from '@primeuix/utils/mergeprops';
 import { getKeyValue, isArray, isFunction, isNotEmpty, isString, resolve, toFlatCase } from '@primeuix/utils/object';
-import React, { useContext } from 'react';
+import * as React from 'react';
 import BaseStyle from '../basestyle';
 import { PrimeReactContext } from '../config';
 import { ComponentContext } from './Component.context';
 
-const defaultProps = {
-    pt: undefined,
-    ptOptions: undefined,
-    unstyled: undefined,
-    dt: undefined
-};
-
-const getDiffProps = (props1: any = {}, props2: any = {}) => {
-    return Object.keys(props1).reduce(
-        (acc, key) => {
-            if (props2.hasOwnProperty(key)) {
-                acc.props[key] = props1[key];
-            } else {
-                acc.attrs[key] = props1[key];
-            }
-
-            return acc;
-        },
-        { props: props2, attrs: {} as any }
-    );
-};
-
 export const useComponent = (options: any = {}) => {
-    const config = useContext<any>(PrimeReactContext);
-    const context = useContext<any>(ComponentContext);
-    const { props, attrs } = getDiffProps(options.props, { ...defaultProps, ...options.defaultProps });
+    const config = React.useContext<any>(PrimeReactContext);
+    const context = React.useContext<any>(ComponentContext);
+    const { props, attrs, state, style } = options;
 
     const $name = React.useMemo(() => {
         return props.__TYPE;
@@ -64,7 +41,7 @@ export const useComponent = (options: any = {}) => {
         return {
             instance: this,
             props,
-            state: undefined, //this.$data,
+            state, //this.$data,
             attrs,
             parent: {
                 instance: parentInstance,

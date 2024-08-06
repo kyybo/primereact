@@ -41,6 +41,9 @@ importers:
       '@primereact/composite':
         specifier: workspace:*
         version: link:../../packages/composite
+      '@primereact/core':
+        specifier: workspace:*
+        version: link:../../packages/core
       next:
         specifier: 14.2.5
         version: 14.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.8)
@@ -178,6 +181,9 @@ importers:
 
   packages/core:
     dependencies:
+      '@primereact/hooks':
+        specifier: workspace:*
+        version: link:../hooks
       '@primeuix/styled':
         specifier: ^0.0.5
         version: 0.0.5

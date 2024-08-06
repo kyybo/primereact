@@ -1,20 +1,14 @@
 'use client';
-import { useComponent } from '@primereact/core/component';
+import { useComponent, withComponent } from '@primereact/core/component';
 import { useId } from '@primereact/hooks';
-import PanelStyle from '@primereact/styles/panel';
+import { style } from '@primereact/styles/panel';
 import { mergeProps } from '@primeuix/utils/mergeprops';
 import * as React from 'react';
 import type { withInProps } from '../types';
 import { defaultProps } from './usePanel.props';
 import type { usePanelProps } from './usePanel.types';
 
-export const usePanel = (inProps: withInProps<usePanelProps>, ref?: React.RefObject<any>) => {
-    const { props, attrs, methods } = useComponent({
-        props: inProps,
-        defaultProps,
-        style: PanelStyle
-    });
-
+export const usePanel = withComponent((props: withInProps<usePanelProps>, attrs: any, ref?: React.RefObject<any>) => {
     const [collapsedState, setCollapsedState] = React.useState(props.collapsed);
     const collapsed = props.toggleable ? (props.onToggle ? props.collapsed : collapsedState) : false;
     const id = useId(attrs.id);
@@ -23,6 +17,13 @@ export const usePanel = (inProps: withInProps<usePanelProps>, ref?: React.RefObj
     const state = {
         collapsed
     };
+
+    const { methods } = useComponent({
+        props,
+        attrs,
+        state,
+        style
+    });
 
     React.useImperativeHandle(ref, () => ({
         props
@@ -43,6 +44,7 @@ export const usePanel = (inProps: withInProps<usePanelProps>, ref?: React.RefObj
     const FOOTER = useFooter({ methods });
 
     return {
+        id,
         instance: ref,
         props,
         state,
@@ -55,7 +57,7 @@ export const usePanel = (inProps: withInProps<usePanelProps>, ref?: React.RefObj
             ...FOOTER
         }
     };
-};
+}, defaultProps);
 
 const useHeader = ({ id, setCollapsedState, props, state, methods }: any, ref?: React.RefObject<any>) => {
     const toggle = (event: any) => {
@@ -114,30 +116,39 @@ const useHeader = ({ id, setCollapsedState, props, state, methods }: any, ref?: 
         methods.ptm('title')
     );
 
-    const icons = mergeProps(
+    const headerActions = mergeProps(
         {
-            className: methods.cx('icons')
+            className: methods.cx('headerActions')
         },
-        methods.ptm('icons')
+        methods.ptm('headerActions')
+    );
+
+    const toggleButton = mergeProps(
+        {
+            onClick: toggle,
+            className: methods.cx('pcToggleButton')
+        },
+        methods.ptm('pcToggleButton')
     );
 
     return {
         header,
         title,
-        icons
+        headerActions,
+        toggleButton
     };
 };
 
 const useContent = ({ id, headerId, state, methods }: any) => {
-    const toggleableContent = mergeProps(
+    const contentContainer = mergeProps(
         {
-            className: methods.cx('toggleableContent'),
+            id,
+            className: methods.cx('contentContainer'),
             'aria-hidden': state.collapsed,
             role: 'region',
-            id,
             'aria-labelledby': headerId
         },
-        methods.ptm('toggleablecontent')
+        methods.ptm('contentContainer')
     );
     const content = mergeProps(
         {
@@ -147,7 +158,7 @@ const useContent = ({ id, headerId, state, methods }: any) => {
     );
 
     return {
-        toggleableContent,
+        contentContainer,
         content
     };
 };

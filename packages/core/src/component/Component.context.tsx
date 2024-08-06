@@ -10,7 +10,7 @@ export const ComponentProvider = (options: any) => {
 
     const value = {
         getProps,
-        ...options
+        ...options.value
     };
 
     return <ComponentContext.Provider value={value}>{options.children}</ComponentContext.Provider>;

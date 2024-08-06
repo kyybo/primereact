@@ -7,7 +7,7 @@ import type { useGlobalProps } from '../types';
  * @see {@link usePanelProps.onToggle}
  * @event
  */
-interface usePanelToggleEvent<E = any> {
+export interface usePanelToggleEvent<E = any> {
     /**
      * Browser event.
      */
