@@ -1,5 +1,5 @@
 {
-    "name": "@primereact/core",
+    "name": "@primereact/styles",
     "version": "12.0.0",
     "author": "PrimeTek Informatics",
     "description": "",
@@ -8,16 +8,16 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/primefaces/primereact.git",
-        "directory": "packages/core"
+        "directory": "packages/styles"
     },
     "bugs": {
         "url": "https://github.com/primefaces/primereact/issues"
     },
     "main": "./src/index.ts",
+    "module": "./src/index.ts",
+    "types": "./src/index.ts",
     "exports": {
-        "./component": "./src/component/index.ts",
-        "./basestyle": "./src/basestyle/index.ts",
-        "./utils": "./src/utils/index.ts"
+        "./panel": "./src/panel/index.ts"
     },
     "publishConfig": {
         "main": "./index.mjs",
@@ -45,16 +45,11 @@
     },
     "dependencies": {
         "@primeuix/styled": "^0.0.5",
-        "@primeuix/utils": "^0.0.5"
-    },
-    "devDependencies": {
-        "@types/react": "^18.3.3",
-        "@types/react-dom": "^18.3.0",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1"
+        "@primeuix/utils": "^0.0.5",
+        "@primereact/core": "workspace:*"
     },
     "peerDependencies": {
-        "react": "^18.0.0"
+        "react": ">=18.0.0"
     },
     "engines": {
         "node": ">=12.11.0"

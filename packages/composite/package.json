@@ -1,5 +1,5 @@
 {
-    "name": "@primereact/core",
+    "name": "@primereact/composite",
     "version": "12.0.0",
     "author": "PrimeTek Informatics",
     "description": "",
@@ -8,16 +8,14 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/primefaces/primereact.git",
-        "directory": "packages/core"
+        "directory": "packages/composite"
     },
     "bugs": {
         "url": "https://github.com/primefaces/primereact/issues"
     },
     "main": "./src/index.ts",
     "exports": {
-        "./component": "./src/component/index.ts",
-        "./basestyle": "./src/basestyle/index.ts",
-        "./utils": "./src/utils/index.ts"
+        "./*": "./src/*/index.ts"
     },
     "publishConfig": {
         "main": "./index.mjs",
@@ -45,7 +43,9 @@
     },
     "dependencies": {
         "@primeuix/styled": "^0.0.5",
-        "@primeuix/utils": "^0.0.5"
+        "@primeuix/utils": "^0.0.5",
+        "@primereact/core": "workspace:*",
+        "@primereact/base": "workspace:*"
     },
     "devDependencies": {
         "@types/react": "^18.3.3",

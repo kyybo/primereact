@@ -1,4 +1,6 @@
-export const theme = ({ dt }) => `
+import BaseStyle from '@primereact/core/basestyle';
+
+const theme = ({ dt }: any) => `
 .p-panel {
     border: 1px solid ${dt('panel.border.color')};
     border-radius: ${dt('panel.border.radius')};
@@ -37,8 +39,8 @@ export const theme = ({ dt }) => `
 }
 `;
 
-export const classes = {
-    root: ({ props }) => [
+const classes = {
+    root: ({ props }: any) => [
         'p-panel p-component',
         {
             'p-panel-toggleable': props.toggleable
@@ -53,8 +55,8 @@ export const classes = {
     footer: 'p-panel-footer'
 };
 
-export default {
+export default BaseStyle.extend({
     name: 'panel',
     theme,
     classes
-};
+});

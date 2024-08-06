@@ -27,9 +27,7 @@
     "unpkg": "umd/primereact.min.js",
     "jsdelivr": "umd/primereact.min.js",
     "exports": {
-        "./inputtext": "./src/inputtext/index.ts",
-        "./panel": "./src/panel/Panel.tsx",
-        "./*": "./*"
+        "./*": "./src/*/index.tsx"
     },
     "publishConfig": {
         "exports": {
@@ -54,7 +52,8 @@
         "@primeuix/styled": "^0.0.5",
         "@primeuix/utils": "^0.0.5",
         "@primereact/core": "workspace:*",
-        "@primereact/hooks": "workspace:*"
+        "@primereact/hooks": "workspace:*",
+        "@primereact/base": "workspace:*"
     },
     "devDependencies": {
         "@types/react": "^18.3.3",

@@ -13,7 +13,7 @@
       /* Language and Environment */
       "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
       "lib": ["dom", "dom.iterable", "esnext"],            /* (UPDATED) Specify a set of bundled library declaration files that describe the target runtime environment. */
-      // "jsx": "preserve",                                /* Specify what JSX code is generated. */
+      "jsx": "react",                                      /* (UPDATED) Specify what JSX code is generated. */
       // "experimentalDecorators": true,                   /* Enable experimental support for TC39 stage 2 draft decorators. */
       // "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
       // "jsxFactory": "",                                 /* Specify the JSX factory function used when targeting React JSX emit, e.g. 'React.createElement' or 'h'. */
@@ -31,8 +31,11 @@
       // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
       "paths": {                                           /* (UPDATED) Specify a set of entries that re-map imports to additional lookup locations. */
         "primereact/*": ["./packages/primereact/src/*"],
+        "@primereact/hooks/*": ["./packages/hooks/src/*"],
+        "@primereact/styles/*": ["./packages/styles/src/*"],
         "@primereact/core/*": ["./packages/core/src/*"],
-        "@primereact/hooks/*": ["./packages/hooks/src/*"]
+        "@primereact/base/*": ["./packages/base/src/*"],
+        "@primereact/composite/*": ["./packages/composite/src/*"]
       },
       // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
       // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
@@ -104,5 +107,6 @@
       // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
       "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
     },
+    "include": ["**/src/**/*", "**/dist/**/*"],
     "exclude": ["**/node_modules"]
   }
