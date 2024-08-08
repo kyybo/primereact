@@ -6,7 +6,7 @@ export default function Home() {
     //const panel = usePanel({}) as any;
 
     return (
-        <>
+        <div className="card">
             <Panel.Root toggleable>
                 <Panel.Header>
                     <Panel.Header.Title>Header</Panel.Header.Title>
@@ -36,6 +36,6 @@ export default function Home() {
                 <span {...panel.$sections.header}>TTHeader</span>
                 <span {...panel.$sections.footer}>TTFooter</span>
             </div>*/}
-        </>
+        </div>
     );
 }

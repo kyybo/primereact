@@ -18,30 +18,21 @@ export const usePanel = withComponent((props: withInProps<usePanelProps>, attrs:
         collapsed
     };
 
-    const { methods } = useComponent({
-        props,
-        attrs,
-        state,
-        style
-    });
-
-    React.useImperativeHandle(ref, () => ({
-        props
-    }));
+    const instance = useComponent({ props, attrs, state, style }, ref);
 
     const root = mergeProps(
         {
             id,
             style: props.style,
-            className: methods.cx('root')
+            className: instance.cx('root')
         },
         attrs,
-        methods.ptm('root')
+        instance.ptm('root')
     );
 
-    const HEADER = useHeader({ id: headerId, setCollapsedState, props, state, methods }, ref);
-    const CONTENT = useContent({ id: contentId, headerId, state, methods });
-    const FOOTER = useFooter({ methods });
+    const HEADER = useHeader({ id: headerId, setCollapsedState, props, state, instance }, ref);
+    const CONTENT = useContent({ id: contentId, headerId, state, instance });
+    const FOOTER = useFooter({ instance });
 
     return {
         id,
@@ -59,7 +50,7 @@ export const usePanel = withComponent((props: withInProps<usePanelProps>, attrs:
     };
 }, defaultProps);
 
-const useHeader = ({ id, setCollapsedState, props, state, methods }: any, ref?: React.RefObject<any>) => {
+const useHeader = ({ id, setCollapsedState, props, state, instance }: any, ref?: React.RefObject<any>) => {
     const toggle = (event: any) => {
         if (!props.toggleable) {
             return;
@@ -103,32 +94,32 @@ const useHeader = ({ id, setCollapsedState, props, state, methods }: any, ref?: 
 
     const header = mergeProps(
         {
-            className: methods.cx('header')
+            className: instance.cx('header')
         },
-        methods.ptm('header')
+        instance.ptm('header')
     );
 
     const title = mergeProps(
         {
             id,
-            className: methods.cx('title')
+            className: instance.cx('title')
         },
-        methods.ptm('title')
+        instance.ptm('title')
     );
 
     const headerActions = mergeProps(
         {
-            className: methods.cx('headerActions')
+            className: instance.cx('headerActions')
         },
-        methods.ptm('headerActions')
+        instance.ptm('headerActions')
     );
 
     const toggleButton = mergeProps(
         {
             onClick: toggle,
-            className: methods.cx('pcToggleButton')
+            className: instance.cx('pcToggleButton')
         },
-        methods.ptm('pcToggleButton')
+        instance.ptm('pcToggleButton')
     );
 
     return {
@@ -139,22 +130,22 @@ const useHeader = ({ id, setCollapsedState, props, state, methods }: any, ref?: 
     };
 };
 
-const useContent = ({ id, headerId, state, methods }: any) => {
+const useContent = ({ id, headerId, state, instance }: any) => {
     const contentContainer = mergeProps(
         {
             id,
-            className: methods.cx('contentContainer'),
+            className: instance.cx('contentContainer'),
             'aria-hidden': state.collapsed,
             role: 'region',
             'aria-labelledby': headerId
         },
-        methods.ptm('contentContainer')
+        instance.ptm('contentContainer')
     );
     const content = mergeProps(
         {
-            className: methods.cx('content')
+            className: instance.cx('content')
         },
-        methods.ptm('content')
+        instance.ptm('content')
     );
 
     return {
@@ -163,12 +154,12 @@ const useContent = ({ id, headerId, state, methods }: any) => {
     };
 };
 
-const useFooter = ({ methods }: any) => {
+const useFooter = ({ instance }: any) => {
     const footer = mergeProps(
         {
-            className: methods.cx('footer')
+            className: instance.cx('footer')
         },
-        methods.ptm('footer')
+        instance.ptm('footer')
     );
 
     return {

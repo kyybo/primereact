@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export const useUpdateEffect = (fn, deps) => {
+export const useUpdateEffect = (fn: any, deps?: any[]) => {
     const mounted = React.useRef(false);
     return React.useEffect(() => {
         if (!mounted.current) {

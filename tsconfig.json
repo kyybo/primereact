@@ -35,7 +35,8 @@
         "@primereact/styles/*": ["./packages/styles/src/*"],
         "@primereact/core/*": ["./packages/core/src/*"],
         "@primereact/base/*": ["./packages/base/src/*"],
-        "@primereact/composite/*": ["./packages/composite/src/*"]
+        "@primereact/composite/*": ["./packages/composite/src/*"],
+        "@primereact/themes/*": ["./packages/themes/src/*"]
       },
       // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
       // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */

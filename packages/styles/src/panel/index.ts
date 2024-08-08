@@ -1,5 +1,3 @@
-import BaseStyle from '@primereact/core/basestyle';
-
 export const theme = ({ dt }: any) => `
 .p-panel {
     border: 1px solid ${dt('panel.border.color')};
@@ -55,8 +53,8 @@ export const classes = {
     footer: 'p-panel-footer'
 };
 
-export const style = BaseStyle.extend({
+export const style = {
     name: 'panel',
     theme,
     classes
-});
+};

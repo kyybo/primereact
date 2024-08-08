@@ -15,7 +15,8 @@
         "primereact": "workspace:*",
         "@primereact/base": "workspace:*",
         "@primereact/composite": "workspace:*",
-        "@primereact/core": "workspace:*"
+        "@primereact/core": "workspace:*",
+        "@primereact/themes": "workspace:*"
     },
     "devDependencies": {
         "typescript": "^5",

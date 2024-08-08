@@ -1,11 +1,15 @@
 'use client';
+import { Theme } from '@primeuix/styled';
 import React, { useState } from 'react';
 
 export const PrimeReactContext = React.createContext({});
 
+export { default as PrimeStyleSheet } from './PrimeStyleSheet';
+
 export const PrimeReactProvider = (props: any) => {
     const propsValue = props.value || {};
 
+    const [theme, setTheme] = useState(propsValue.theme || undefined);
     const [ripple, setRipple] = useState(propsValue.ripple || false);
     const [inputStyle, setInputStyle] = useState(propsValue.inputStyle || 'outlined');
     const [locale, setLocale] = useState(propsValue.locale || 'en');
@@ -33,6 +37,8 @@ export const PrimeReactProvider = (props: any) => {
     );
     const [pt, setPt] = useState(propsValue.pt || undefined);
     const [unstyled, setUnstyled] = useState(propsValue.unstyled || false);
+
+    Theme.setTheme(theme);
 
     const value = {
         ripple,
@@ -62,7 +68,10 @@ export const PrimeReactProvider = (props: any) => {
         pt,
         setPt,
         unstyled,
-        setUnstyled
+        setUnstyled,
+        theme,
+        setTheme,
+        sheet: props.sheet
     };
 
     return <PrimeReactContext.Provider value={value}>{props.children}</PrimeReactContext.Provider>;

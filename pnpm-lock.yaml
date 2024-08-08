@@ -44,6 +44,9 @@ importers:
       '@primereact/core':
         specifier: workspace:*
         version: link:../../packages/core
+      '@primereact/themes':
+        specifier: workspace:*
+        version: link:../../packages/themes
       next:
         specifier: 14.2.5
         version: 14.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.8)
@@ -274,6 +277,13 @@ importers:
       react:
         specifier: '>=18.0.0'
         version: 18.3.1
+    publishDirectory: dist
+
+  packages/themes:
+    dependencies:
+      '@primeuix/styled':
+        specifier: ^0.0.5
+        version: 0.0.5
     publishDirectory: dist
 
 packages:

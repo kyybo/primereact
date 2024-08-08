@@ -17,7 +17,8 @@
     "exports": {
         "./component": "./src/component/index.ts",
         "./basestyle": "./src/basestyle/index.ts",
-        "./utils": "./src/utils/index.ts"
+        "./utils": "./src/utils/index.ts",
+        "./config": "./src/config/index.tsx"
     },
     "publishConfig": {
         "main": "./index.mjs",
