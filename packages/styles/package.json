@@ -17,6 +17,7 @@
     "module": "./src/index.ts",
     "types": "./src/index.ts",
     "exports": {
+        "./base": "./src/base/index.ts",
         "./panel": "./src/panel/index.ts"
     },
     "publishConfig": {

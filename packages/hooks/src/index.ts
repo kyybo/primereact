@@ -5,6 +5,10 @@ export const useId = (initialValue?: string) => {
     return initialValue || `pr_id_${React.useId().replaceAll(':', '')}`;
 };
 
+export const useAttrSelector = (prefix: string = '') => {
+    return `${prefix}${React.useId().replaceAll(':', '')}`;
+};
+
 export const useProps = (props1: any = {}, props2: any = {}) => {
     return Object.keys(props1).reduce(
         (acc, key) => {

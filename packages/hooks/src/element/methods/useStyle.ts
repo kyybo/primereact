@@ -41,7 +41,7 @@ export const useStyle = (css: string | undefined, options: any = {}) => {
         const _styleProps = { ...props, ..._props };
         const [_name, _id, _nonce] = [_styleProps.name || name, _styleProps.id || id, _styleProps.nonce || nonce];
 
-        styleRef.current = container.querySelector(`style[data-primevue-style-id="${_name}"]`) || document.getElementById(_id) || document.createElement('style');
+        styleRef.current = container.querySelector(`style[data-primereact-style-id="${_name}"]`) || document.getElementById(_id) || document.createElement('style');
         styleNameRef.current = _name;
 
         if (!styleRef.current.isConnected) {
@@ -53,7 +53,7 @@ export const useStyle = (css: string | undefined, options: any = {}) => {
                 nonce: _nonce
             });
             first ? container.prepend(styleRef.current) : container.appendChild(styleRef.current);
-            setAttribute(styleRef.current, 'data-primevue-style-id', styleNameRef.current);
+            setAttribute(styleRef.current, 'data-primereact-style-id', styleNameRef.current);
             setAttributes(styleRef.current, _styleProps);
             styleRef.current.textContent = cssRef.current;
             styleRef.current.onload = (event: React.ReactEventHandler<HTMLStyleElement>) => onStyleLoaded?.(event, { name: styleNameRef.current });

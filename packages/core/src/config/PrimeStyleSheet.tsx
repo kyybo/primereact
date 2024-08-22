@@ -1,3 +1,4 @@
+import { isNotEmpty } from '@primeuix/utils';
 import * as React from 'react';
 
 export default class {
@@ -8,19 +9,21 @@ export default class {
         this._attrs = attrs || {};
     }
     add(key: string, css: string) {
-        const _attrs = Object.entries(this._attrs)
-            .reduce((acc: any, [k, v]) => acc.push(`${k}="${v}"`) && acc, [])
-            .join(' ');
+        if (isNotEmpty(css)) {
+            const _attrs = Object.entries(this._attrs)
+                .reduce((acc: any, [k, v]) => acc.push(`${k}="${v}"`) && acc, [])
+                .join(' ');
 
-        this._styles.set(key, {
-            css,
-            tag: `<style ${_attrs} data-primereact-style-id="${key}">${css}</style>`,
-            element: (
-                <style {...this._attrs} data-primereact-style-id={key} key={key}>
-                    {css}
-                </style>
-            )
-        });
+            this._styles.set(key, {
+                css,
+                tag: `<style ${_attrs} data-primereact-style-id="${key}">${css}</style>`,
+                element: (
+                    <style {...this._attrs} data-primereact-style-id={key} key={key}>
+                        {css}
+                    </style>
+                )
+            });
+        }
     }
     update() {
         // @todo
