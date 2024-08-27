@@ -161,6 +161,9 @@ importers:
       '@primereact/core':
         specifier: workspace:*
         version: link:../core
+      '@primereact/icons':
+        specifier: workspace:*
+        version: link:../icons
       '@primeuix/styled':
         specifier: ^0.0.5
         version: 0.0.5
@@ -229,6 +232,28 @@ importers:
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+    publishDirectory: dist
+
+  packages/icons:
+    dependencies:
+      '@primereact/core':
+        specifier: workspace:*
+        version: link:../core
+      '@primereact/hooks':
+        specifier: workspace:*
+        version: link:../hooks
+      '@primereact/styles':
+        specifier: workspace:*
+        version: link:../styles
+      '@primeuix/styled':
+        specifier: ^0.0.5
+        version: 0.0.5
+      '@primeuix/utils':
+        specifier: ^0.0.5
+        version: 0.0.5
+      react:
+        specifier: '>=18.0.0'
+        version: 18.3.1
     publishDirectory: dist
 
   packages/primereact:

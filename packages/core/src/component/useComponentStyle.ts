@@ -1,6 +1,6 @@
 import { style as BaseStyle } from '@primereact/styles/base';
 import { Theme, ThemeService } from '@primeuix/styled';
-import { setAttribute, uuid } from '@primeuix/utils';
+import { classNames, setAttribute, uuid } from '@primeuix/utils';
 import { getKeyValue } from '@primeuix/utils/object';
 import * as React from 'react';
 import { PrimeReactContext } from '../config';
@@ -134,10 +134,10 @@ export const useComponentStyle = withComponentStyle(({ props, attrs, state, styl
         //if (!Theme.isStyleNameLoaded(style?.name) && style?.name) {
         const { css } = $style?.getComponentTheme?.() || {};
 
-        $style?.load(css, { name: `${style.name}-variables` });
-        $style?.loadTheme({ name: `${style.name}-style` });
+        $style?.load(css, { name: `${style?.name}-variables` });
+        $style?.loadTheme({ name: `${style?.name}-style` });
 
-        Theme.setLoadedStyleName(style.name);
+        Theme.setLoadedStyleName(style?.name);
         //}
 
         // layer order
@@ -163,7 +163,7 @@ export const useComponentStyle = withComponentStyle(({ props, attrs, state, styl
 
     // exposed methods
     const cx = (key = '', params = {}) => {
-        return !$isUnstyled ? getKeyValue(style.classes, key, { ...$params, ...params }) : undefined;
+        return !$isUnstyled ? classNames(getKeyValue(style.classes, key, { ...$params, ...params })) : undefined;
     };
 
     const sx = (key = '', when = true, params = {}) => {
@@ -179,6 +179,7 @@ export const useComponentStyle = withComponentStyle(({ props, attrs, state, styl
 
     return {
         cx,
-        sx
+        sx,
+        isUnstyled: $isUnstyled
     };
 });
